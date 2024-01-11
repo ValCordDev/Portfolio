@@ -2,24 +2,14 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 fixed">
+    <div className="navbar bg-base-100 fixed z-10">
         <div className="flex-1">
-            <a className="btn btn-ghost text-xl">valcord</a>
+            <a className="btn btn-ghost text-xl" href='/#'>valcord</a>
         </div>
         <div className="flex-none">
             <ul className="menu menu-horizontal px-1">
-            <li><a>Link</a></li>
-            <li>
-                <details>
-                <summary>
-                    Parent
-                </summary>
-                <ul className="p-2 bg-base-100 rounded-t-none">
-                    <li><a>Link 1</a></li>
-                    <li><a>Link 2</a></li>
-                </ul>
-                </details>
-            </li>
+            <li><a className='font-semibold' href='/projects'>Projects</a></li>
+            <li><a className='font-semibold'>Contact me</a></li>
             </ul>
         </div>
     </div>

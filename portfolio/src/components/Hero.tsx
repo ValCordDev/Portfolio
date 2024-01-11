@@ -1,17 +1,21 @@
 import React from 'react'
 
-const test = () => {
+const Hero = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content text-center">
-        <div className="max-w-md">
+        <div className="max-w-lg">
           <h1 className="text-5xl font-bold">Hello there</h1>
-          <p className="py-6">Hey! I'm ValCord. I serve many purposes in the digital industry, including being a Web developer and graphic designer.</p>
-          <button className="btn btn-primary">Get Started</button>
+          <p className="py-6">Hey! I'm ValCord. I serve many purposes in the digital world, including being a developer and graphical designer. I excel in web development, discord bot development and pursuing style in web development and graphically.</p>
+          <button className="btn btn-primary">About me</button>
+        </div>
+        <div className="indicator ml-10">
+          <span className="indicator-item badge badge-success"></span> 
+          <img className="grid w-64 h-64 bg-base-300 place-items-center rounded-xl" src='https://cdn.discordapp.com/attachments/968076976084639776/1031254672163487805/Pfp.jpg'/>
         </div>
       </div>
     </div>
   )
 }
 
-export default test
+export default Hero
