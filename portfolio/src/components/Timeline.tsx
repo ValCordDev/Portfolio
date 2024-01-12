@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaCamera } from "react-icons/fa6";
 
 const Timeline = () => {
   return (
