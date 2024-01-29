@@ -14,6 +14,13 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    colors: {
+      'teMain': '#ff5555',
+      'teMainDark': '#993333',
+      'teSecondary': '#232323',
+      'iuMain': '#2563eb',
+      'iuSecondary': '#7c3aed',
+    },
   },
   plugins: [require("daisyui")],
 }

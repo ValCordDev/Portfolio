@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import GithubPages from '@/components/GithubPages'
 import Footer from '@/components/Footer'
 import FeaturedProjects from '@/components/FeaturedProjects'
+import TitanExpress from '@/components/TitanExpress'
 
 const inter = Inter({ subsets: ['latin'] })
 
