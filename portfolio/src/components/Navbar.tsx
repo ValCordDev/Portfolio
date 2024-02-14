@@ -11,7 +11,7 @@ const Navbar = () => {
             <li><a className='font-semibold' href='/projects'>Projects</a></li>
             <li><a className='font-semibold' href='/graphics'>Graphics</a></li>
             <li><a className='font-semibold' href='/gallery'>Gallery</a></li>
-            <li><a className='font-semibold'>Contact me</a></li>
+            <li><a className='font-semibold' href='/contactme'>Contact me</a></li>
             </ul>
         </div>
     </div>
