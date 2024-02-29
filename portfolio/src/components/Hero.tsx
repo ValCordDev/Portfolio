@@ -11,7 +11,7 @@ const Hero = () => {
         </div>
         <div className="indicator ml-10">
           <span className="indicator-item badge badge-success"></span> 
-          <img className="grid w-64 h-64 bg-base-300 place-items-center rounded-xl" src='https://cdn.discordapp.com/attachments/968076976084639776/1031254672163487805/Pfp.jpg'/>
+          <img className="grid w-64 h-64 bg-base-300 place-items-center rounded-xl" src='/pfp.jpg'/>
         </div>
       </div>
     </div>
