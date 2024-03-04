@@ -14,23 +14,24 @@ const GithubPages = () => {
     }, []);
 
     function formatDate(dateString: string | number | Date) {
-        const options = { day: 'numeric', month: 'long', year: 'numeric' };
-        const event = new Date(dateString);
-        let formattedDate = event.toLocaleDateString('en-US', options);
-      
-        // Adding the suffix for the day
-        const day = event.getDate();
-        let suffix = 'th';
-        if (day === 1 || day === 21 || day === 31) {
-          suffix = 'st';
-        } else if (day === 2 || day === 22) {
-          suffix = 'nd';
-        } else if (day === 3 || day === 23) {
-          suffix = 'rd';
-        }
-      
-        return formattedDate.replace(/(\d+)(st|nd|rd|th)/, `$1${suffix}`);
+      const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+      const event = new Date(dateString);
+      let formattedDate = event.toLocaleDateString('en-US', options);
+  
+      // Adding the suffix for the day
+      const day = event.getDate();
+      let suffix = 'th';
+      if (day === 1 || day === 21 || day === 31) {
+        suffix = 'st';
+      } else if (day === 2 || day === 22) {
+        suffix = 'nd';
+      } else if (day === 3 || day === 23) {
+        suffix = 'rd';
       }
+  
+      return formattedDate.replace(/(\d+)(st|nd|rd|th)/, `$1${suffix}`);
+  }
+  
       
   return (
     <div className="hero min-h-screen bg-base-200">
