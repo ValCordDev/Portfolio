@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const TitanExpress = () => {
   return (
@@ -15,10 +17,12 @@ const TitanExpress = () => {
         </div>
 
         <div className="hidden sm:block sm:basis-56">
-            <img
-            alt="Guitar"
-            src="https://cdn.discordapp.com/attachments/1100832550420750347/1149471438265401504/ETS2-84.png"
-            className="aspect-square h-full w-full object-cover rounded-sm"
+            <Image
+            alt="Titan Express"
+            src="/te.png"
+            className="aspect-square object-cover rounded-sm"
+            width={200}
+            height={200}
             />
         </div>
 
@@ -26,11 +30,11 @@ const TitanExpress = () => {
             <div
             className="border-s border-gray-900/10 p-4 border-neutral-50/10 sm:!border-l-transparent sm:p-6"
             >
-                <a href="#">
+                <Link href="#">
                     <h3 className="font-bold uppercase text-neutral-50">
                     Titan Express (Company)
                     </h3>
-                </a>
+                </Link>
 
                 <p className="mt-2 line-clamp-3 text-sm/relaxed text-neutral-300">
                     Titan Express is a English speaking Virtual Truck Company (VTC) with members from across the world. Our VTC started at the 6th of April, 2023 as a friend group and has quickly built up to become a large community, focused on delivering the best trucking experience there is.

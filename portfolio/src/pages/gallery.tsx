@@ -27,7 +27,7 @@ const gallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 pt-20 p-10">
           {images.map((image, index) => (
             // Directly place img elements under the main grid container
-            <img key={index} className="h-auto max-w-full rounded-lg" src={image.url} alt={image.alt} />
+            <Image key={index} className="h-auto max-w-full rounded-lg" src={image.url} alt={image.alt} width={500} height={300} />
           ))}
         </div>
 

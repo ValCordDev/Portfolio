@@ -1,5 +1,5 @@
 import React from 'react'
-import { SiAdobelightroomclassic, SiAdobepremierepro, SiFigma, SiAdobexd, SiAdobeindesign, SiAdobeillustrator, SiAdobephotoshop, SiJavascript, SiPhp, SiHtml5, SiCss3, SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiAdobeaftereffects, SiAdobelightroomclassic, SiAdobepremierepro, SiFigma, SiAdobexd, SiAdobeindesign, SiAdobeillustrator, SiAdobephotoshop, SiJavascript, SiPhp, SiHtml5, SiCss3, SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { PiPaintBrushBold } from "react-icons/pi";
 
@@ -70,6 +70,10 @@ const Technologies = () => {
                 <button className="btn btn-outline m-2">
                     <SiAdobelightroomclassic />
                     Lightroom
+                </button>
+                <button className="btn btn-outline m-2">
+                    <SiAdobeaftereffects />
+                    After Effects
                 </button>
             </div>
         </div>

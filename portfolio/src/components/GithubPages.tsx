@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchRepositories } from '@/pages/api/githubApi';
 import { Repository } from '@/pages/api/types';
+import Link from 'next/link';
 
 const GithubPages = () => {
     const [repos, setRepos] = useState<Repository[]>([]);
@@ -38,7 +39,7 @@ const GithubPages = () => {
           <div className="max-w-screen">
             <h1 className="text-5xl font-bold">Github Repositories</h1>
             <p className="py-6 mb-10">Here are some of my public Github repositories. You can find more of my repositories on my Github profile.</p>
-            <div className='grid grid-cols-3 gap-10'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10'>
               {repos.map((repo) => (
                 <div key={repo.name} className="card bg-base-100 shadow-xl">
                   <div className="card-body text-center items-center">
@@ -46,7 +47,7 @@ const GithubPages = () => {
                       <p>Last updated: {formatDate(repo.updated_at as unknown as string)}</p>
                       <p>Created: {formatDate(repo.created_at as unknown as string)}</p>
                       <div className="card-actions justify-end">
-                      <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">GitHub Link</a>
+                      <Link href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">GitHub Link</Link>
                       </div>
                   </div>
                 </div>

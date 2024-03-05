@@ -1,5 +1,6 @@
 import React from 'react';
-import Image from 'next/image'; // Import Image from 'next/image'
+import Image from 'next/image'; 
+import Link from 'next/link'; 
 
 const InvestorUka = () => {
   return (
@@ -19,10 +20,10 @@ const InvestorUka = () => {
         {/* Next.js Image component for optimized image loading */}
         <Image
           alt="Investoruka"
-          src="https://cdn.discordapp.com/attachments/968076976084639776/1197872004087435284/Investoruka.png"
-          layout="fill" // You might need to adjust this based on your design requirements
-          objectFit="cover"
-          className="rounded-sm"
+          src="/investoruka.png"
+          className="aspect-square object-cover rounded-sm"
+          width={200}
+          height={200}
         />
       </div>
 
@@ -30,11 +31,11 @@ const InvestorUka = () => {
         <div
           className="border-s border-gray-900/10 p-4 border-neutral-50/10 sm:!border-l-transparent sm:p-6"
         >
-          <a href="#">
+          <Link href="#">
             <h3 className="font-bold uppercase text-neutral-50">
               Oslo Utlån (Investoruka)
             </h3>
-          </a>
+          </Link>
 
           <p className="mt-2 line-clamp-3 text-sm/relaxed text-neutral-300">
             &quot;Oslo Utlån&quot; is a concept used to let everyone borrow expensive equipment for whatever project they may have. This is a school project, meaning that others from the same school came to invest in one of several companies, where we ended up getting 2nd place.
@@ -42,12 +43,12 @@ const InvestorUka = () => {
         </div>
 
         <div className="sm:flex sm:items-end sm:justify-end">
-          <a
+          <Link
             href="#"
             className="block bg-iuMain px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition duration-300 hover:bg-teMainDark rounded-br-lg rounded-tl-sm"
           >
             Read more
-          </a>
+          </Link>
         </div>
       </div>
     </article>
