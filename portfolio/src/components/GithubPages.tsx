@@ -7,7 +7,7 @@ const GithubPages = () => {
 
     useEffect(() => {
       const fetchData = async () => {
-        const repositories = await fetchRepositories('ValCordDev'); // replace 'username' with the desired GitHub username
+        const repositories = await fetchRepositories('ValCordDev'); // Replace 'ValCordDev' with the desired GitHub username
         setRepos(repositories);
       };
       fetchData();
@@ -30,33 +30,32 @@ const GithubPages = () => {
       }
   
       return formattedDate.replace(/(\d+)(st|nd|rd|th)/, `$1${suffix}`);
-  }
+    }
   
-      
-  return (
-    <div className="hero min-h-screen bg-base-200">
-    <div className="hero-content text-center">
-      <div className="w-screen">
-        <h1 className="text-5xl font-bold">Github Repositories</h1>
-        <p className="py-6 mb-10">Here are some of my public Github repositories. You can find more of my repositories on my Github profile.</p>
-        <div className='grid grid-cols-3 gap-10'>
-        {repos.map((repo) => (
-            <div className="card bg-base-100 shadow-xl">
-                <div className="card-body text-center items-center">
-                    <h2 className="card-title text-center">{repo.name}</h2>
-                    <p>Last updated: {formatDate(repo.updated_at)}</p>
-                    <p>Created: {formatDate(repo.created_at)}</p>
-                    <div className="card-actions justify-end">
-                    <a href={repo.html_url} className="btn btn-primary">Github Link</a>
-                    </div>
+    return (
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content text-center">
+          <div className="max-w-screen">
+            <h1 className="text-5xl font-bold">Github Repositories</h1>
+            <p className="py-6 mb-10">Here are some of my public Github repositories. You can find more of my repositories on my Github profile.</p>
+            <div className='grid grid-cols-3 gap-10'>
+              {repos.map((repo) => (
+                <div key={repo.name} className="card bg-base-100 shadow-xl">
+                  <div className="card-body text-center items-center">
+                      <h2 className="card-title">{repo.name}</h2>
+                      <p>Last updated: {formatDate(repo.updated_at as unknown as string)}</p>
+                      <p>Created: {formatDate(repo.created_at as unknown as string)}</p>
+                      <div className="card-actions justify-end">
+                      <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">GitHub Link</a>
+                      </div>
+                  </div>
                 </div>
+              ))}
             </div>
-        ))}
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
-  </div>
-  )
+    );
 }
 
 export default GithubPages;
