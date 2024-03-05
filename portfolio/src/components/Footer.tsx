@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer items-center p-4 bg-neutral text-neutral-content">
         <aside className="items-center grid-flow-col">
-            <Image src='https://cdn.discordapp.com/attachments/968076976084639776/1031254672163487805/Pfp.jpg' width="36" height="36" alt="" className='rounded-full' />
+            <Image src='pfp.jpg' width="36" height="36" alt="" className='rounded-full' />
             <p>Copyright © 2024 - All right reserved</p>
         </aside> 
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
